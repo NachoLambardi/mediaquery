@@ -1,0 +1,56 @@
+@mixin generalStyles ($color, $fontSize, $fontStyle, $margin, $textAlign) {
+      color: $color;
+      font-size: $fontSize;
+      font-style: $fontStyle;
+      margin: $margin;
+      text-align: $textAlign;
+}
+@media (max-width: 480px) {
+.content {
+  .sidebar {
+    width: 95%;
+    a {
+      display: inline;
+    }
+  }
+}
+
+}
+@mixin images {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid green;
+    @media (max-width: 1200px) {
+        width: 95%;
+    }
+}
+body {
+  background-color: black;
+}
+img {
+  @include images;
+}
+%part {
+  @include generalStyles(#eee, 25px, auto, 25px, justify);
+}
+.intro {
+
+      h1  {
+        @include generalStyles(#eee, 60px, arabian, 40px, center);
+      }
+      .part1 {
+          @extend %part;
+          > a {
+            color: green;
+          }
+      }
+      .part2 {
+          @extend %part;
+      }
+      .part3 {
+          @extend %part;
+      }
+      .footer {
+          @extend %part;
+      }
+}

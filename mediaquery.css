@@ -1,0 +1,33 @@
+@media (max-width: 480px) {
+  .content .sidebar {
+    width: 95%; }
+    .content .sidebar a {
+      display: inline; } }
+body {
+  background-color: black; }
+
+img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid green; }
+  @media (max-width: 1200px) {
+    img {
+      width: 95%; } }
+
+.intro .part1, .intro .part2, .intro .part3, .intro .footer {
+  color: #eee;
+  font-size: 25px;
+  font-style: auto;
+  margin: 25px;
+  text-align: justify; }
+
+.intro h1 {
+  color: #eee;
+  font-size: 60px;
+  font-style: arabian;
+  margin: 40px;
+  text-align: center; }
+.intro .part1 > a {
+  color: green; }
+
+/*# sourceMappingURL=mediaquery.css.map */
